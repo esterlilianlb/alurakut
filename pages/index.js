@@ -1,7 +1,7 @@
 import Box from '../src/components/Box'
 import MainGrid from '../src/components/MainGrid'
 import { AlurakutMenu, OrkutNostalgicIconSet } from '../src/lib/AlurakutCommons';
-import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
+import GetFriends from '../src/utils/api';
 
 function ProfileSidebar(props) {
   return (
@@ -40,24 +40,7 @@ export default function Home() {
           </Box>
         </div>
         <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
-          <ProfileRelationsBoxWrapper>
-            <h2 className="smallTitle">
-              Pessoas da comunidade ({friends.length})
-            </h2>
-
-            <ul>
-              {friends.map((item) => {
-                return (
-                  <li>
-                    <a href={`/users/${item}`} key={item}>
-                      <img src={`https://github.com/${item}.png`} />
-                      <span>{item}</span>
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
-          </ProfileRelationsBoxWrapper>
+          <GetFriends githubUser={randomUser} />
         </div>
       </MainGrid>
     </>
