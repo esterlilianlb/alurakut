@@ -13,15 +13,6 @@ function ProfileSidebar(props) {
 
 export default function Home() {
   const randomUser = 'esterlilianlb';
-  const friends = [
-    'vieiramanda',
-    'juunegreiros',
-    'omariosouto',
-    'peas',
-    'rafaballerini',
-    'marcobrunodev',
-    'felipefialho'
-  ]
 
   return (
     <>
